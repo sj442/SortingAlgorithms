@@ -13,13 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     let array = [10, 4, 5 ,6, 7, 10]
     
-    var insertionSort = InsertionSort(withArray: array)
-    insertionSort.sort()
+    var mergeSort = MergeSort(withArray: array)
+    mergeSort.sort()
+    
+    window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    window?.rootViewController = UIViewController()
+    window?.makeKeyAndVisible()
     
     return true
   }
