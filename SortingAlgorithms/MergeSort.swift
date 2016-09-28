@@ -8,41 +8,47 @@
 
 import UIKit
 
-struct MergeSort<T: Comparable> {
+// Top down implementation
+func mergeSort<T: Comparable>(_ array: [T]) -> [T] {
+  return sort(array)
+}
+
+fileprivate func sort<T: Comparable>(_ array: [T]) -> [T] {
+  guard array.count > 1 else {
+    return array
+  }
+  let mid = array.count/2
   
-  var array: [T]
+  let leftArray = sort(Array(array[0..<mid]))
+  let rightArray = sort(Array(array[mid..<array.count]))
+  return merge(leftArray, rightArray: rightArray)
+}
+
+
+fileprivate func merge<T: Comparable>(_ leftArray: [T], rightArray: [T]) -> [T] {
+  var leftIndex = 0
+  var rightIndex = 0
   
-  init(withArray array: [T]) {
-    self.array = array
+  var orderedArray = [T]()
+  
+  while leftIndex < leftArray.count && rightIndex < rightArray.count {
+    if leftArray[leftIndex] <= rightArray[rightIndex] {
+      orderedArray.append(leftArray[leftIndex])
+      leftIndex += 1
+    } else {
+      orderedArray.append(rightArray[rightIndex])
+      rightIndex += 1
+    }
   }
   
-  mutating func sort() {
-    let n = array.count
-    let mid = n/2
-    var i = 0
-    var j = mid
-    var k = 0
-    var aux = array
-    while i < mid && j <= n {
-      if aux[i] <= aux[j] {
-        array[k] = aux[i]
-        i += 1
-      } else {
-        array[k] = aux[j]
-        j += 1
-      }
-      k += 1
-    }
-    
-    if i < mid {
-      while i <= mid {
-        array[k] = aux[i]
-        k += 1
-        i += 1
-      }
-    }
-    
-    print("sorted array: \(array)")
+  while leftIndex < leftArray.count {
+    orderedArray.append(leftArray[leftIndex])
+    leftIndex += 1
   }
   
+  while rightIndex < rightArray.count {
+    orderedArray.append(rightArray[rightIndex])
+    rightIndex += 1
+  }
+  return orderedArray
 }

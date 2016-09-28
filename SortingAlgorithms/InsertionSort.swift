@@ -13,24 +13,16 @@ import UIKit
 // Worst case: if the array is ordered in descending order, insertion sort will use ~ N^2/2 compares and N^2/2 exchanges (1 + 2 ..N-1)
 // for partially sorted arrays, the number of exchanges is equal to the number of inversions (hence runsi n linear time)
 
-struct InsertionSort<T: Comparable> {
-  
-  var array: [T]
-  
-  init(withArray array: [T]) {
-    self.array = array
-  }
-  
-  mutating func sort() {
-    let N = array.count
-    for i in 1..<N {
-      var j = i
-      while j > 0 && array[j] < array[j-1] {
-        array.swap(j, i2: j-1)
-        j -= 1
-      }
+func insertionSort<T: Comparable>(array: [T]) -> [T] {
+  var a = array
+  let N = a.count
+  for i in 1..<N {
+    var j = i
+    while j > 0 && array[j] < array[j-1] {
+      a.swap(j, i2: j-1)
+      j -= 1
     }
-    print("sorted array: \(array)")
   }
-  
+  return a
 }
+

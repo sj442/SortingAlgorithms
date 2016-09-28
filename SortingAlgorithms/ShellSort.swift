@@ -10,33 +10,24 @@ import UIKit
 
 // Knuth's implementation
 // h = 3x + 1
-struct ShellSort<T: Comparable> {
-  
-  var array: [T]
-  
-  init(witharray array: [T]) {
-    self.array = array
+func shellSort<T: Comparable>(array: [T]) -> [T] {
+  var a = array
+  var h = 1
+  let N = array.count
+  while h < N/3 {
+    h = 3 * h + 1
   }
   
-  
-  mutating func sort() {
-    var h = 1
-    let N = array.count
-    while h < N/3 {
-      h = 3 * h + 1
-    }
-    
-    while h >= 1 {
-      for i in h..<N {
-        var j = i
-        while j>=h && array[j] < array[j - h] {
-          array.swap(j, i2: j-h)
-          j -= h
-        }
+  while h >= 1 {
+    for i in h..<N {
+      var j = i
+      while j>=h && array[j] < array[j - h] {
+        a.swap(j, i2: j-h)
+        j -= h
       }
-      h = h/3
     }
-    print("sorted array: \(array)")
+    h = h/3
   }
-  
+  return a
 }
+

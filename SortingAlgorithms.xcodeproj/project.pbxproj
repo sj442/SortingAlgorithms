@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1FAFF61D9B111100D20DA5 /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FAFF51D9B111100D20DA5 /* BubbleSort.swift */; };
+		3F2775481D94753B00F3C89A /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2775471D94753B00F3C89A /* QuickSort.swift */; };
 		3F6840A71D6A18860074799B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6840A61D6A18860074799B /* AppDelegate.swift */; };
 		3F6840AE1D6A18870074799B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F6840AD1D6A18870074799B /* Assets.xcassets */; };
 		3F6840B11D6A18870074799B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6840AF1D6A18870074799B /* LaunchScreen.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F1FAFF51D9B111100D20DA5 /* BubbleSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
+		3F2775471D94753B00F3C89A /* QuickSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
 		3F6840A31D6A18860074799B /* SortingAlgorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortingAlgorithms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6840A61D6A18860074799B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F6840AD1D6A18870074799B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				3F6840D61D6A18EB0074799B /* SelectionSort.swift */,
 				3F6840DA1D6AAAED0074799B /* ShellSort.swift */,
 				3F6840DC1D6AB2600074799B /* MergeSort.swift */,
+				3F2775471D94753B00F3C89A /* QuickSort.swift */,
+				3F1FAFF51D9B111100D20DA5 /* BubbleSort.swift */,
 				3F6840D81D6A33640074799B /* Comparable.swift */,
 				3F6840AD1D6A18870074799B /* Assets.xcassets */,
 				3F6840AF1D6A18870074799B /* LaunchScreen.storyboard */,
@@ -202,13 +208,16 @@
 				TargetAttributes = {
 					3F6840A21D6A18860074799B = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					3F6840B61D6A18870074799B = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 3F6840A21D6A18860074799B;
 					};
 					3F6840C11D6A18870074799B = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 3F6840A21D6A18860074799B;
 					};
 				};
@@ -266,10 +275,12 @@
 			files = (
 				3F6840DD1D6AB2600074799B /* MergeSort.swift in Sources */,
 				3F6840DB1D6AAAED0074799B /* ShellSort.swift in Sources */,
+				3F2775481D94753B00F3C89A /* QuickSort.swift in Sources */,
 				3F6840D71D6A18EB0074799B /* SelectionSort.swift in Sources */,
 				3F6840D51D6A18A20074799B /* InsertionSort.swift in Sources */,
 				3F6840D91D6A33640074799B /* Comparable.swift in Sources */,
 				3F6840A71D6A18860074799B /* AppDelegate.swift in Sources */,
+				3F1FAFF61D9B111100D20DA5 /* BubbleSort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +418,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.littleAuk.www.SortingAlgorithms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -418,6 +430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.littleAuk.www.SortingAlgorithms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -429,6 +442,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.littleAuk.www.SortingAlgorithmsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SortingAlgorithms.app/SortingAlgorithms";
 			};
 			name = Debug;
@@ -441,6 +455,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.littleAuk.www.SortingAlgorithmsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SortingAlgorithms.app/SortingAlgorithms";
 			};
 			name = Release;
@@ -452,6 +467,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.littleAuk.www.SortingAlgorithmsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SortingAlgorithms;
 			};
 			name = Debug;
@@ -463,6 +479,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.littleAuk.www.SortingAlgorithmsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SortingAlgorithms;
 			};
 			name = Release;
@@ -486,6 +503,7 @@
 				3F6840CD1D6A18870074799B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F6840CE1D6A18870074799B /* Build configuration list for PBXNativeTarget "SortingAlgorithmsTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +512,7 @@
 				3F6840D01D6A18870074799B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F6840D11D6A18870074799B /* Build configuration list for PBXNativeTarget "SortingAlgorithmsUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +521,7 @@
 				3F6840D31D6A18870074799B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
